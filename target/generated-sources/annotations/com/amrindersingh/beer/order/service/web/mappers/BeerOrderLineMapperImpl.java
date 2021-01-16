@@ -2,15 +2,15 @@ package com.amrindersingh.beer.order.service.web.mappers;
 
 import com.amrindersingh.beer.order.service.domain.BeerOrderLine;
 import com.amrindersingh.beer.order.service.domain.BeerOrderLine.BeerOrderLineBuilder;
-import com.amrindersingh.beer.order.service.web.model.BeerOrderLineDto;
-import com.amrindersingh.beer.order.service.web.model.BeerOrderLineDto.BeerOrderLineDtoBuilder;
+import com.brewery.model.BeerOrderLineDto;
+import com.brewery.model.BeerOrderLineDto.BeerOrderLineDtoBuilder;
 import javax.annotation.processing.Generated;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2021-01-13T07:29:36-0500",
+    date = "2021-01-16T06:12:31-0500",
     comments = "version: 1.3.0.Final, compiler: javac, environment: Java 15.0.1 (Oracle Corporation)"
 )
 @Component
@@ -35,6 +35,7 @@ public class BeerOrderLineMapperImpl implements BeerOrderLineMapper {
         beerOrderLineDto.lastModifiedDate( dateMapper.asOffsetDateTime( line.getLastModifiedDate() ) );
         beerOrderLineDto.beerId( line.getBeerId() );
         beerOrderLineDto.orderQuantity( line.getOrderQuantity() );
+        beerOrderLineDto.quantityAllocated( line.getQuantityAllocated() );
 
         return beerOrderLineDto.build();
     }
@@ -55,6 +56,7 @@ public class BeerOrderLineMapperImpl implements BeerOrderLineMapper {
         beerOrderLine.lastModifiedDate( dateMapper.asTimestamp( dto.getLastModifiedDate() ) );
         beerOrderLine.beerId( dto.getBeerId() );
         beerOrderLine.orderQuantity( dto.getOrderQuantity() );
+        beerOrderLine.quantityAllocated( dto.getQuantityAllocated() );
 
         return beerOrderLine.build();
     }

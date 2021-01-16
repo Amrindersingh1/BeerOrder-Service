@@ -2,8 +2,8 @@ package com.amrindersingh.beer.order.service.services;
 
 import com.amrindersingh.beer.order.service.repositories.BeerOrderRepository;
 import com.amrindersingh.beer.order.service.repositories.CustomerRepository;
-import com.amrindersingh.beer.order.service.web.model.BeerOrderDto;
-import com.amrindersingh.beer.order.service.web.model.BeerOrderLineDto;
+import com.brewery.model.BeerOrderDto;
+import com.brewery.model.BeerOrderLineDto;
 import com.amrindersingh.beer.order.service.bootstrap.BeerOrderBootStrap;
 import com.amrindersingh.beer.order.service.domain.Customer;
 import lombok.extern.slf4j.Slf4j;

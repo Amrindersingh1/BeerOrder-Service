@@ -18,7 +18,7 @@
 package com.amrindersingh.beer.order.service.web.mappers;
 
 import com.amrindersingh.beer.order.service.domain.BeerOrder;
-import com.amrindersingh.beer.order.service.web.model.BeerOrderDto;
+import com.brewery.model.BeerOrderDto;
 import org.mapstruct.Mapper;
 
 @Mapper(uses = {DateMapper.class, BeerOrderLineMapper.class})
